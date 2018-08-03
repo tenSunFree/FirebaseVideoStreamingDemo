@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#be9063"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.8"
+            android:background="#040c0e">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <VideoView
+                    android:id="@+id/mainVideoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"/>
+
+                <ProgressBar
+                    android:id="@+id/bufferProgressProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/progress_bar_style"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="#a4978e">
+
+            <ImageView
+                android:id="@+id/playImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1.2"
+                android:scaleType="centerInside"
+                android:src="@drawable/play"/>
+
+            <TextView
+                android:id="@+id/cuttentTimerTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:maxLines="1"
+                android:shadowColor="#040c0e"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="00:00"
+                android:textColor="#525b56"
+                android:textSize="16sp"/>
+
+            <com.example.administrator.firebasevideostreaming.custom.CustomProgressbar
+                android:id="@+id/videoPregressProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="5.7"
+                android:background="@drawable/progress_bar_style2"
+                android:max="100"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/durationTimerTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:maxLines="1"
+                android:shadowColor="#040c0e"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="00:00"
+                android:textColor="#525b56"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
